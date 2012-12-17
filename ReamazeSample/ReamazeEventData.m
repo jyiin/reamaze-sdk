@@ -7,11 +7,11 @@
 //
 
 #import "ReamazeEventData.h"
-#import "ReamazeBasicUserData.h"
+#import "ReamazeUserData.h"
 
 @implementation ReamazeEventData
 {
-    ReamazeBasicUserData *_user;
+    ReamazeUserData *_user;
     NSString *_name;
     NSString *_value;
 }
@@ -22,7 +22,7 @@
 - (id)init
 {
     if (self = [super init]) {
-        _user = [[ReamazeBasicUserData alloc] init];
+        _user = [[ReamazeUserData alloc] init];
     }
     return self;
 }
@@ -46,10 +46,10 @@
     return _user.identifier;
 }
 
-- (NSDictionary *)dictionaryRepresentation
+- (NSMutableDictionary *)dictionaryRepresentation
 {
     NSAssert(_name.length > 0, @"event name is required");
-    NSMutableDictionary *dictionary = (NSMutableDictionary *)[_user dictionaryRepresentation];
+    NSMutableDictionary *dictionary = [_user dictionaryRepresentation];
     
     NSMutableDictionary *eventDictionary = [NSMutableDictionary dictionaryWithObject:_name forKey:@"name"];
     if (_value.length > 0) {

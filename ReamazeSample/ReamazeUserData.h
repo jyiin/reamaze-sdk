@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ReamazeBasicUserData.h"
 
-@interface ReamazeUserData : ReamazeBasicUserData
+#define kUserKey @"user"
+
+@interface ReamazeUserData : NSObject
 {
+    NSString *_identifier;    
     NSString *_email;
     NSString *_facebook;
     NSString *_twitter;
@@ -21,6 +23,7 @@
 }
 
 // an identifier is required, all other properties are optional
+@property (nonatomic, retain) NSString *identifier;
 @property (nonatomic, retain) NSString *email;
 @property (nonatomic, retain) NSString *facebook;
 @property (nonatomic, retain) NSString *twitter;
@@ -28,5 +31,9 @@
 @property (nonatomic, retain) NSString *sms;
 @property (nonatomic, retain) NSString *avatar;
 @property (nonatomic, retain) NSDictionary *data;
+
+// all ReamazeUserData instances should be populated with an id / identifier
+- (id)initWithID:(NSString *)identifier;
+- (NSMutableDictionary *)dictionaryRepresentation;
 
 @end

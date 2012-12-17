@@ -22,7 +22,6 @@
 		9619007115CE523A00BF8D2C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619007015CE523A00BF8D2C /* JSONKit.m */; };
 		9619007415CFA90500BF8D2C /* EventsConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619007315CFA90500BF8D2C /* EventsConnection.m */; };
 		9619007715CFA98700BF8D2C /* ReamazeUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619007615CFA98700BF8D2C /* ReamazeUserData.m */; };
-		9619007A15CFB0E900BF8D2C /* ReamazeBasicUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619007915CFB0E900BF8D2C /* ReamazeBasicUserData.m */; };
 		9619007D15CFB6BB00BF8D2C /* ReamazeBasicEventData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619007C15CFB6BB00BF8D2C /* ReamazeBasicEventData.m */; };
 		9619008115DB7C8100BF8D2C /* ReamazeEventData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619008015DB7C8000BF8D2C /* ReamazeEventData.m */; };
 /* End PBXBuildFile section */
@@ -54,8 +53,6 @@
 		9619007315CFA90500BF8D2C /* EventsConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsConnection.m; sourceTree = "<group>"; };
 		9619007515CFA98600BF8D2C /* ReamazeUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReamazeUserData.h; sourceTree = "<group>"; };
 		9619007615CFA98700BF8D2C /* ReamazeUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReamazeUserData.m; sourceTree = "<group>"; };
-		9619007815CFB0E900BF8D2C /* ReamazeBasicUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReamazeBasicUserData.h; sourceTree = "<group>"; };
-		9619007915CFB0E900BF8D2C /* ReamazeBasicUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReamazeBasicUserData.m; sourceTree = "<group>"; };
 		9619007B15CFB6BA00BF8D2C /* ReamazeBasicEventData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReamazeBasicEventData.h; sourceTree = "<group>"; };
 		9619007C15CFB6BB00BF8D2C /* ReamazeBasicEventData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReamazeBasicEventData.m; sourceTree = "<group>"; };
 		9619007E15DB7AC400BF8D2C /* ReamazeConnectionInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReamazeConnectionInternal.h; sourceTree = "<group>"; };
@@ -139,8 +136,6 @@
 				9619007E15DB7AC400BF8D2C /* ReamazeConnectionInternal.h */,
 				9619006515CE4C8F00BF8D2C /* ReamazeSettings.h */,
 				9619006A15CE51EB00BF8D2C /* ReamazeSettings.m */,
-				9619007815CFB0E900BF8D2C /* ReamazeBasicUserData.h */,
-				9619007915CFB0E900BF8D2C /* ReamazeBasicUserData.m */,
 				9619007515CFA98600BF8D2C /* ReamazeUserData.h */,
 				9619007615CFA98700BF8D2C /* ReamazeUserData.m */,
 				9619007B15CFB6BA00BF8D2C /* ReamazeBasicEventData.h */,
@@ -237,7 +232,6 @@
 				9619007115CE523A00BF8D2C /* JSONKit.m in Sources */,
 				9619007415CFA90500BF8D2C /* EventsConnection.m in Sources */,
 				9619007715CFA98700BF8D2C /* ReamazeUserData.m in Sources */,
-				9619007A15CFB0E900BF8D2C /* ReamazeBasicUserData.m in Sources */,
 				9619007D15CFB6BB00BF8D2C /* ReamazeBasicEventData.m in Sources */,
 				9619008115DB7C8100BF8D2C /* ReamazeEventData.m in Sources */,
 			);
@@ -371,6 +365,7 @@
 				9619005F15CE4A8400BF8D2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

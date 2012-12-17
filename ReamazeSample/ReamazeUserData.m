@@ -10,7 +10,7 @@
 
 @implementation ReamazeUserData
 
-
+@synthesize identifier = _identifier;
 @synthesize email = _email;
 @synthesize facebook = _facebook;
 @synthesize twitter = _twitter;
@@ -19,8 +19,17 @@
 @synthesize avatar = _avatar;
 @synthesize data = _data;
 
+- (id)initWithID:(NSString *)identifier
+{
+    if (self = [super init]) {
+        self.identifier = identifier;
+    }
+    return self;
+}
+
 - (void)dealloc
 {
+    [_identifier release];
     [_email release];
     [_facebook release];
     [_twitter release];
@@ -39,11 +48,10 @@
     }
 }
 
-- (NSDictionary *)dictionaryRepresentation
+- (NSMutableDictionary *)dictionaryRepresentation
 {
-    NSMutableDictionary *dictionary = (NSMutableDictionary *)[super dictionaryRepresentation];
-    
-    NSMutableDictionary *userDictionary = [dictionary objectForKey:kUserKey];
+    NSAssert(_identifier.length > 0, @"user id is required");
+    NSMutableDictionary *userDictionary = [NSMutableDictionary dictionaryWithObject:_identifier forKey:@"id"];
  
     [self insertObject:_email forKey:@"email" in:userDictionary];
     [self insertObject:_facebook forKey:@"facebook" in:userDictionary];
@@ -55,7 +63,7 @@
     if (_data && [_data count]) {
         [userDictionary setObject:_data forKey:@"data"];
     }
-    return dictionary;
+    return [NSMutableDictionary dictionaryWithObject:userDictionary forKey:kUserKey];
 }
 
 @end

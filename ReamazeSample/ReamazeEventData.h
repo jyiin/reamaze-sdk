@@ -8,14 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@class ReamazeBasicUserData;
-@class ReamazeBasicEventData;
-
 @interface ReamazeEventData : NSObject
 
 @property (nonatomic, retain) NSString *identifier;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *value;
 
-- (NSDictionary *)dictionaryRepresentation;
+- (NSMutableDictionary *)dictionaryRepresentation;
 @end
